@@ -1,0 +1,15 @@
+syntax = "proto3";
+package saboru;
+import "google/protobuf/timestamp.proto";
+option go_package = "exp/proto/pb";
+
+message Channel {
+  int64 id = 1;
+  string label = 2;
+}
+
+message Message {
+  int64 id = 1;
+  string body = 2;
+  optional string senderName = 3;
+}
